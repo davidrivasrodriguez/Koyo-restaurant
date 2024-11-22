@@ -1,0 +1,475 @@
+.hero {
+    width: 100%;
+    padding: 10rem 12.5%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: -3rem;
+}
+
+.hero-main-image {
+    /* width: 1440px; */
+    height: 700px;
+    width: 100%;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.4976584383753502) 100%), url(../img/team/header-bg2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    margin-top: -1.7rem;
+    position: relative;
+    z-index: 99;
+}
+
+.hero-pattern-image {
+    /* width: 1440px; */
+    height: 700px;
+    width: 100%;
+
+    background: url(../img/team/6224907.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    z-index: 9;
+    left: -70px;
+    top: -70px;
+}
+
+.hero-content h1 {
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    font-size: clamp(3.5rem, 2.429rem + 2.857vw, 5rem);
+    color: white;
+
+    position: absolute;
+    z-index: 999;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-united-text,
+.hero-perfected-text {
+    font-size: clamp(1.2rem, 0.629rem + 1.524vw, 2rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: white;
+
+    position: absolute;
+    z-index: 999;
+}
+
+.hero-united-text {
+    top: 0;
+    left: 0;
+    margin: 2rem;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: .2s;
+}
+
+.hero-perfected-text {
+    bottom: 0;
+    right: 0;
+    margin: 2rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: .2s;
+}
+
+/* ---------------- PRESENTATION ----------------- */
+
+.presentation {
+    padding: 10rem 12.5%;
+    background-color: var(--background-primary);
+}
+
+.presentation-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentation-hands-image {
+    flex: 1;
+    height: 1045px;
+    background: url(../img/team/hands.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.presentation-title {
+    font-size: clamp(1.9rem, 1.471rem + 1.143vw, 2.5rem);
+    letter-spacing: .3em;
+    font-family: AzoSans-Thin;
+    text-align: left;
+    display: none;
+}
+
+.presentation svg {
+    height: 1045px;
+}
+
+.presentation-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.presentation-text p {
+    font-size: clamp(0.95rem, 0.843rem + 0.286vw, 1.1rem);
+}
+
+
+/* ------------------ TEAM ------------------ */
+
+.team-members {
+    padding: 10rem 12.5%;
+}
+
+
+
+.member-chef {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.chef-image {
+    flex: 1;
+    min-width: 354px;
+    aspect-ratio: 5 / 7;
+    background: url(../img/team/chef.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.chef-image .social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transform: translateX(0);
+    display: flex;
+    gap: 15px;
+    opacity: 1; 
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.chef-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,0.7));
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 9;
+}
+
+.chef-image:hover::after {
+    opacity: 1;
+}
+
+.chef-image:hover .social-icons {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chef-image .social-icons a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.chef-image .social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.chef-content {
+    flex: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.chef-role {
+    text-transform: uppercase;
+    font-size: clamp(0.95rem, 0.843rem + 0.286vw, 1.1rem);
+    color: var(--primary-color);
+}
+
+.chef-name {
+    font-family: AzoSans-Light;
+    font-size: clamp(1.1rem, 0.814rem + 0.762vw, 1.5rem);
+    text-transform: capitalize;
+    color: black;
+}
+
+.chef-content p {
+    width: 460px;
+    font-size: clamp(0.95rem, 0.843rem + 0.286vw, 1.1rem);
+}
+
+.chef-quote {
+    font-style: italic;
+    font-size: clamp(0.95rem, 0.843rem + 0.286vw, 1.1rem);
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 470px;
+
+    position: relative;
+}
+
+.chef-quote::before {
+    content: "";
+    border: 1px solid var(--primary-color);
+    position: absolute;
+    height: 100%;
+
+    left: -2rem;
+}
+
+.chef-button {
+    margin-top: 1rem;
+}
+
+.chef-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.member-group {
+    margin-top: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.member-image {
+    border: 1px solid black;
+    flex: 1;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.member-1 {
+    background-image: url(../img/team/marie-chen.jpeg);
+}
+
+.member-2 {
+    background-image: url(../img/team/james-anderson.jpg);
+    background-position: center 10%;
+}
+
+.member-3 {
+    background-image: url(../img/team/david-garcia.jpg);
+    transform: scaleX(-1);
+}
+
+.member-role {
+    margin-top: 1rem;
+    font-size: clamp(0.95rem, 0.843rem + 0.286vw, 1.1rem);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.member-name {
+    margin-top: .5rem;
+    font-family: AzoSans-Light;
+    font-size: clamp(1.1rem, 0.814rem + 0.762vw, 1.5rem);
+    text-transform: capitalize;
+    color: black;
+}
+
+.member-bio {
+    margin-top: 1rem;
+    width: 300px;
+}
+
+.member-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,0.7));
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 9;
+}
+
+.member-image:hover::after {
+    opacity: 1;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 99;
+}
+
+.member-image:hover .social-icons {
+    opacity: 1;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.member-3 .social-icons {
+    transform: translateX(-50%) scaleX(-1);
+}
+
+/* ------------------ QUERIES ------------------ */
+
+@media screen and (max-width: 1154px) {
+
+    .hero {
+        padding: 6rem 6.25%;
+    }
+
+    .hero-pattern-image {
+        display: none;
+    }
+
+    .presentation {
+        padding: 6rem 6.25%;
+    }
+
+    .team-members {
+        padding: 6rem 6.25%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1336px) {
+    .member-chef {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .chef-image {
+        aspect-ratio: 3 / 2;
+        width: 100%;
+        background-position: center center;
+    }
+
+    .member-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 969px) {
+    /* .presentation {
+        background-color: green
+    } */
+
+    .presentation-container {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .presentation-hands-image {
+        aspect-ratio: 3 / 2;
+        width: 100%;
+
+        background-position: center 16%;
+    }
+
+    .presentation svg {
+        display: none;
+    }
+
+    .presentation-title {
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .presentation-text {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:563px) {
+    /* .team-members {
+        background-color: green
+    } */
+
+    .chef-quote {
+        width: 400px;
+    }
+
+}

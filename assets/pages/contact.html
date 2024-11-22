@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/collapse.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kōyō | Contact</title>
+
+</head>
+<body>
+    <section class="nav-container">
+        <nav>
+            <div class="logo"><a href="../../index.html">Kōyō</a></div>
+            <div class="main-nav">
+                <div class="collapse">
+                    <div class="nav-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="menu-on">
+                    <ul class="menu-on-nav">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../pages/team.html">Team</a></li>
+                        <li><a href="../pages/menu.html">Menu</a></li>
+                        <li><a href="../pages/contact.html" class="active">Contact</a></li>
+                        <li><a href="../pages/contact.html#contact" class="cta-button">Reservations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="progress"></div>
+    </section>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Contact</h1>
+            <div class="hero-subtitle">YOUR GASTRONOMIC JOURNEY BEGINS HERE</div>
+            <div class="hero-main-image"></div>
+            <div class="hero-pattern-image"></div>
+        </div>
+    </header>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <div class="contact-us">
+                    <h2>Contact us</h2>
+                    <div class="contact-us-content">
+                        <div class="contact-us-phone">+34 673 323 243</div>
+                        <div class="contact-us-divider-bar"></div>
+                        <div class="contact-us-email">info@koyo.com</div>
+                        <div class="contact-us-divider-bar"></div>
+                        <div class="contact-us-address">Calle de Serrano, 123 <br>Madrid España, 28006</div>
+                        <div class="social-logo">
+                            <a href="#" class="social-item social-item-1"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-item social-item-2"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-item social-item-3"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <h2>Available</h2>
+                    <div class="contact-available">
+                        <div class="contact-available-day">Monday: Closed</div>
+                        <div class="contact-us-divider-bar"></div>
+                        <div class="contact-available-time">Dinner: 20:00 - 23:30</div>
+                        <div class="contact-us-divider-bar"></div>
+                        <div class="contact-available-time">Sunday: Closed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="contact-reservation">
+                    <div class="contact-right-image"></div>
+                    <h2>Make Reservation</h2>
+                    <form class="reservation-form" id="reservationForm">
+                        <div class="reservation-options">
+                            <div class="option-group calendar">
+                                <div class="calendar-header">
+                                    <button type="button" class="calendar-nav prev">‹</button>
+                                    <span class="current-month">November 2024</span>
+                                    <button type="button" class="calendar-nav next">›</button>
+                                </div>
+                                <div class="calendar-grid">
+                                    <div class="weekdays">
+                                        <span>MON</span>
+                                        <span>TUE</span>
+                                        <span>WED</span>
+                                        <span>THU</span>
+                                        <span>FRI</span>
+                                        <span>SAT</span>
+                                        <span>SUN</span>
+                                    </div>
+                                    <div class="days" id="calendarDays"></div>
+                                </div>
+                                <input type="hidden" id="selectedDate" required>
+                            </div>
+        
+                            <div class="option-group time-select">
+                                <h3><i class="fa fa-clock"></i> Choose your time</h3>
+                                <div class="time-slots">
+                                    <div class="meal-period">
+                                        <h4>DINNER</h4>
+                                        <div class="time-buttons">
+                                            <button type="button" class="time-btn">20:00</button>
+                                            <button type="button" class="time-btn">20:30</button>
+                                            <button type="button" class="time-btn">21:00</button>
+                                            <button type="button" class="time-btn">21:30</button>
+                                            <button type="button" class="time-btn">22:00</button>
+                                            <button type="button" class="time-btn">22:30</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="selectedTime" required>
+                            </div>
+        
+                            <div class="option-group guests-select">
+                                <h3><i class="fa fa-user"></i> Number of guests</h3>
+                                <div class="guest-buttons">
+                                    <button type="button" class="guest-btn">1</button>
+                                    <button type="button" class="guest-btn">2</button>
+                                    <button type="button" class="guest-btn">3</button>
+                                    <button type="button" class="guest-btn">4</button>
+                                    <button type="button" class="guest-btn">5</button>
+                                    <button type="button" class="guest-btn">6</button>
+                                </div>
+                                <input type="hidden" id="selectedGuests" required>
+                            </div>
+                        </div>
+        
+                        <div class="contact-inputs">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="tel" placeholder="Phone number" required>
+                            <button type="submit" class="cta-button">MAKE RESERVATION</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4912.728062255217!2d-3.6923259949726837!3d40.42340388986007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228ea0b806f51%3A0x6cefc0b712da2b27!2sC.%20de%20Serrano%2C%20Madrid!5e0!3m2!1ses!2ses!4v1731967633144!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-flex">
+                <div class="footer-nav col-0">
+                    <div class="footer-logo">Kōyō</div>
+                    <p class="footer-desc">Experience the harmony of tradition and innovation 
+                        through our seasonal kaiseki cuisine, where each dish 
+                        tells a story of time and place.
+                    </p>
+                    <div class="social-logo">
+                        <a href="#" class="social-item social-item-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-item social-item-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-item social-item-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav-rest">
+                    <div class="footer-nav col-1">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../pages/team.html">Team</a></li>
+                            <li><a href="../pages/menu.html">Menu</a></li>
+                            <li><a href="../pages/gallery.html">Gallery</a></li>
+                            <li><a href="../pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav col-2">
+                        <h4>Hours</h4>
+                        <ul>
+                            <li>Tuesday - Saturday</li>
+                            <li>Dinner: 20:00 - 23:30</li>
+                            <li>Last seating: 22:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav col-3">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>Calle de Serrano, 123</li>
+                            <li>Madrid España, 28006</li>
+                            <li>+34 673 323 243</li>
+                            <li><a href="contact.html#contact" class="cta-button">Reservations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kōyō. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/collapse.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

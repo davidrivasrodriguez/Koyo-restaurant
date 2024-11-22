@@ -1,0 +1,97 @@
+.nav-bar {
+    width: 30px;
+    height: 35px;
+    position: relative;
+    margin-left: auto;
+
+    transform: rotate(0deg);
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+
+}
+
+.nav-bar span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 50%;
+    background: #333333;
+    opacity: 1;
+
+    transform: rotate(0deg);
+
+    transition: 0.25s ease-in-out;
+}
+
+.nav-bar span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 9px 9px 0;
+}
+
+.nav-bar span:nth-child(odd) {
+    left: 0px;
+    border-radius: 9px 0 0 9px;
+}
+
+.nav-bar span:nth-child(1),
+.nav-bar span:nth-child(2) {
+    top: 0px;
+}
+
+.nav-bar span:nth-child(3),
+.nav-bar span:nth-child(4) {
+    top: 9px;
+}
+
+.nav-bar span:nth-child(5),
+.nav-bar span:nth-child(6) {
+    top: 18px;
+}
+
+.nav-bar.open span:nth-child(1),
+.nav-bar.open span:nth-child(6) {
+
+    transform: rotate(45deg);
+}
+
+.nav-bar.open span:nth-child(2),
+.nav-bar.open span:nth-child(5) {
+
+    transform: rotate(-45deg);
+}
+
+.nav-bar.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+
+.nav-bar.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+}
+
+.nav-bar.open span:nth-child(1) {
+    transform: rotate(45deg);
+    left: 5px;
+    top: 7px;
+}
+
+.nav-bar.open span:nth-child(2) {
+    transform: rotate(-45deg);
+    left: calc(50% - 3px);
+    top: 7px;
+}
+
+.nav-bar.open span:nth-child(5) {
+    transform: rotate(-45deg);
+    left: 5px;
+    top: 14px;
+}
+
+.nav-bar.open span:nth-child(6) {
+    transform: rotate(45deg);
+    top: 14px;
+    left: calc(50% - 2px);
+}
